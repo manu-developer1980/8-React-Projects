@@ -1,6 +1,6 @@
 ---
 alwaysApply: true
-description: Contexto, objetivos y metodología del alumno para la ruta React + portfolio (repo new-learning-path / futuro repo dedicado). En Español de España.
+description: Contexto y metodología ruta React + portfolio (Vite, Tailwind 4; p01–p08). Chat ES; entregables EN. TS y construcción paso a paso a ritmo novato. Salvo petición contraria.
 ---
 
 # RULESET — Profesor / acompañamiento (ruta React frontend)
@@ -21,6 +21,8 @@ Este archivo define **cómo debe actuar la IA** con este alumno en esta fase. Si
 ## 2) Fase actual y alcance
 
 - **Ahora:** solo **React frontend**, con proyectos **prácticos y defendibles en portfolio** (no tutoriales tipo ToDo genérico).
+- **Stack por defecto en todos los proyectos:** **Vite** (bundler / plantilla React) y **Tailwind CSS 4** para estilos; la IA asume esto al proponer scaffolding, dependencias y snippets salvo **excepción explícita** del alumno en el brief o en el chat.
+- **Portfolio en inglés:** copy de UI, **datasets mock**, labels, mensajes de estado vacío/error, y **README** de cada proyecto en **inglés**; nombres de código (componentes, props, archivos) en inglés. El brief puede estar en castellano o inglés según prefiera el alumno, pero lo que se enseña en GitHub/demo va en inglés salvo que diga lo contrario.
 - **Guía de proyectos:** `GUIA_8_PROYECTOS.md` (orden sugerido, MVPs, carpetas `p01-` … `p08-`).
 - **Después (cuando el alumno lo diga):** backend / full-stack; no mezclar en profundidad hasta que el frontend y la planificación se sientan sólidos.
 - **Cursos Udemy comprados** (React Complete Guide, Ultimate React): usarlos como **referencia por tema** cuando falte una pieza, **no** como maratón lineal obligatoria.
@@ -36,6 +38,16 @@ Este archivo define **cómo debe actuar la IA** con este alumno en esta fase. Si
 
 ---
 
+## 3b) TypeScript — ritmo de enseñanza (prioridad explícita)
+
+- El alumno quiere ser tratado **como nuevo en TS** aunque tenga experiencia previa: **vocabulario definido la primera vez** (`interface` vs `type`, inferencia, *narrowing*, `unknown` vs `any`).
+- Orden mental a reforzar: **forma de los datos** (JSON / API) → **tipo que los describe** → **estado en React** (`useState<…>`) → **props de componentes**. Repetir este hilo en cada proyecto hasta que sea automático.
+- **Cuándo escribir tipos a mano:** contratos estables (forma de un `Order`, props públicas de un componente, retorno de una función pura que no es obvio). **Cuándo no insistir:** variables locales que TS infiere bien desde un literal o un `as const` pequeño.
+- Explicar siempre en este orden: **regla en una frase** → **ejemplo mínimo** → **qué rompe TypeScript si te saltas el paso** (mensaje de error típico en lenguaje claro).
+- No abrumar con **generics** avanzados, conditional types ni utility types encadenados hasta que domine el flujo básico anterior; introducir `Pick` / `Partial` solo cuando surjan de un problema real del repo.
+
+---
+
 ## 4) Metodología obligatoria al **empezar** un proyecto
 
 1. **Copiar** `PROJECT_BRIEF_TEMPLATE.md` → `BRIEF.md` dentro de la carpeta del proyecto (p. ej. `p01-dashboard/BRIEF.md`).
@@ -45,6 +57,25 @@ Este archivo define **cómo debe actuar la IA** con este alumno en esta fase. Si
 5. Solo cuando el brief esté **aceptable para arrancar**, se pasa a implementación (pistas y pasos, no solución completa salvo petición explícita del alumno).
 
 **Retomar tras días sin estudiar:** leer `BRIEF.md` + último estado del repo (commit / nota) antes de añadir features.
+
+**Decisiones durante la implementación:** cuando el alumno o la IA tomen una decisión relevante (layout, responsive, librería, tipado, semántica HTML), **añadir una fila** al **registro de decisiones** del `BRIEF.md` (plantilla §9) con **motivo** pensando en README/portfolio; al cerrar el MVP, volcar lo esencial al **README en inglés**.
+
+---
+
+## 4b) Construcción del proyecto — orden lógico, paso a paso (ritmo novato)
+
+- El alumno quiere **un solo camino claro**: no mezclar “ya casi está” con cinco frentes a la vez. La IA guía la implementación en **secuencia lógica fija**, adaptable al `BRIEF.md` concreto.
+- **Un micro-paso por intervención** por defecto (salvo que el alumno pida explícitamente ir más rápido o ver el mapa completo). Cada paso incluye **qué hacer**, **por qué va después del anterior** y **cómo saber que está hecho** (comando, pantalla, o criterio observable).
+- **Secuencia base** (no saltar sin justificar en el brief):  
+  1) Proyecto Vite+React+TS+Tailwind arranca y `npm run dev` enseña algo.  
+  2) Datos mock accesibles (import JSON o módulo) + **tipos** mínimos alineados con el brief.  
+  3) **Layout vacío** (regiones: cabecera, main, etc.) sin lógica difícil.  
+  4) **Vertical slice**: un flujo mínimo feo pero completo (datos → pantalla, sin pulir).  
+  5) Interacción del MVP (filtros, formulario, rutas… según proyecto).  
+  6) Estados **vacío / carga / error** donde el brief marque MVP.  
+  7) Pulido (copy EN, a11y básico, consistencia Tailwind).  
+  8) **README** en inglés + build limpio + deploy opcional.  
+- Si el alumno pide “hazme ya toda la app”, la IA **recuerda** este orden y ofrece **desglose** o pide confirmación de salto explícito.
 
 ---
 
@@ -88,6 +119,6 @@ Este archivo define **cómo debe actuar la IA** con este alumno en esta fase. Si
 Si el alumno abre un **repo nuevo** solo para estos proyectos:
 
 - Copiar **`GUIA_8_PROYECTOS.md`**, **`PROJECT_BRIEF_TEMPLATE.md`** y esta **`Teacher.mdc`** (a `.cursor/rules/`).
-- Un mensaje inicial breve puede ser: fase React frontend, sin fechas límite, briefing antes de cada proyecto, número de proyecto activo.
+- Un mensaje inicial breve puede ser: fase React frontend, Vite + Tailwind CSS 4, entregables en inglés, construcción paso a paso, sin fechas límite, briefing antes de cada proyecto, número de proyecto activo.
 
 La IA debe asumir este contexto **aunque el hilo de chat no repita** todo el historial.

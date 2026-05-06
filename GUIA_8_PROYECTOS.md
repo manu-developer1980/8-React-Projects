@@ -4,6 +4,12 @@ Este documento es tu **hoja de ruta** sin calendario: avanzas por **orden sugeri
 
 **Antes de codificar** en cada uno: copia `PROJECT_BRIEF_TEMPLATE.md` a la carpeta del proyecto (`BRIEF.md`), rellénalo y revisión con preguntas de planificación (edge cases incluidos).
 
+**Stack común (todos los proyectos):** [Vite](https://vite.dev/) + React, y [Tailwind CSS 4](https://tailwindcss.com/) para estilos. Cada app vive en su carpeta (`p01-dashboard/`, etc.); crea el proyecto con la plantilla habitual de Vite + React y configura Tailwind 4 según la doc oficial del major que uses.
+
+**Idioma del portfolio (entregables):** la guía puedes seguirla en castellano, pero en **cada proyecto** la UI de la app, los **datos mock**, los textos de ejemplo y el **`README`** orientado a recruiters van en **inglés**. Código (nombres de componentes, variables, rutas) también en inglés salvo decisión explícita en el brief.
+
+**Decisiones en vivo:** a medida que toméis decisiones de diseño o técnica durante la construcción, **anotadlas en el `BRIEF.md`** del proyecto (sección **§9 — Registro de decisiones…** en la plantilla), con **motivo** para poder trasladarlas al README. No confiar solo en el chat.
+
 ---
 
 ## Cómo usar esta guía sin fechas límite
@@ -12,6 +18,23 @@ Este documento es tu **hoja de ruta** sin calendario: avanzas por **orden sugeri
 - Define solo **“siguiente hito”** (por ejemplo: vertical slice en pantalla), no semanas.
 - Si dejas varios días sin tocar el repo: al volver, lee **tu propio `BRIEF.md` + último commit** antes de añadir features.
 - Marca las casillas de seguimiento cuando **de verdad** cumplan el criterio (no por optimismo).
+
+---
+
+## Orden lógico de construcción (cada proyecto, ritmo “novato”)
+
+No importa cuánta prisa tengas: **un bloque detrás de otro**. Si un paso no “cierra”, no pases al siguiente (evita tres medias pantallas a la vez).
+
+1. **Arranque:** carpeta del proyecto, Vite + React + TypeScript, Tailwind 4; `npm run dev` y pantalla mínima que confirme que el cable está bien.
+2. **Datos y forma:** mocks (JSON o similar) donde toque el brief; en TypeScript, **tipos** que describan una fila / entidad; importar y comprobar en consola o en un `<pre>` temporal si hace falta (luego lo quitas).
+3. **Esqueleto de UI:** layout con regiones vacías (cabecera, contenido, pie si aplica), sin lógica difícil todavía.
+4. **Vertical slice:** un solo camino feliz “de punta a punta” (datos → componente que lista o muestra lo esencial), aunque sea feo; aquí validas que el flujo principal existe.
+5. **Interacción del MVP:** filtros, fechas, rutas, formularios… **solo** lo que el brief marca para el MVP; nada de “por si acaso”.
+6. **Estados:** vacío, carga, error (solo donde el brief diga que entra en MVP).
+7. **Pulido:** textos en inglés, espaciado, foco/teclado básico si lo acordaste.
+8. **Cierre:** README en inglés, `npm run build` sin errores, demo desplegada si la quieres.
+
+Detalle en **`.cursor/rules/Teacher.mdc`** (§4b) para cómo debe guiar la IA en el chat. El “siguiente hito” de la sección anterior = normalmente **el siguiente número** de esta lista, no “todo el dashboard”.
 
 ---
 
@@ -63,7 +86,7 @@ Marca cuando el proyecto esté **cerrado a nivel MVP** según su checklist y tu 
 
 **Plus (cuando el MVP esté hecho):** export CSV del resultado filtrado solo en cliente.
 
-**Carpeta sugerida:** `new-learning-path/p01-dashboard/`
+**Carpeta sugerida:** `p01-dashboard/`
 
 **Checklist cierre MVP:**
 
@@ -85,7 +108,7 @@ Marca cuando el proyecto esté **cerrado a nivel MVP** según su checklist y tu 
 
 **Plus:** persistir borrador del formulario en `localStorage`.
 
-**Carpeta sugerida:** `new-learning-path/p02-catalogo-b2b/`
+**Carpeta sugerida:** `p02-catalogo-b2b/`
 
 **Checklist cierre MVP:**
 
@@ -107,7 +130,7 @@ Marca cuando el proyecto esté **cerrado a nivel MVP** según su checklist y tu 
 
 **Plus:** datos solo JSON estático; service worker solo si sobra tiempo y lo justificas en el brief.
 
-**Carpeta sugerida:** `new-learning-path/p03-agenda-evento/`
+**Carpeta sugerida:** `p03-agenda-evento/`
 
 **Checklist cierre MVP:**
 
@@ -129,7 +152,7 @@ Marca cuando el proyecto esté **cerrado a nivel MVP** según su checklist y tu 
 
 **Plus:** test de un hook de datos o de un reducer pequeño.
 
-**Carpeta sugerida:** `new-learning-path/p04-api-explorer/`
+**Carpeta sugerida:** `p04-api-explorer/`
 
 **Checklist cierre MVP:**
 
@@ -151,7 +174,7 @@ Marca cuando el proyecto esté **cerrado a nivel MVP** según su checklist y tu 
 
 **Plus:** estilos de impresión o vista “handout”.
 
-**Carpeta sugerida:** `new-learning-path/p05-markdown-guias/`
+**Carpeta sugerida:** `p05-markdown-guias/`
 
 **Checklist cierre MVP:**
 
@@ -173,7 +196,7 @@ Marca cuando el proyecto esté **cerrado a nivel MVP** según su checklist y tu 
 
 **Plus:** timeline de actividad simulada al cambiar etapa.
 
-**Carpeta sugerida:** `new-learning-path/p06-kanban-crm/`
+**Carpeta sugerida:** `p06-kanban-crm/`
 
 **Checklist cierre MVP:**
 
@@ -195,7 +218,7 @@ Marca cuando el proyecto esté **cerrado a nivel MVP** según su checklist y tu 
 
 **Plus:** versiones guardadas en `localStorage`.
 
-**Carpeta sugerida:** `new-learning-path/p07-presupuestos/`
+**Carpeta sugerida:** `p07-presupuestos/`
 
 **Checklist cierre MVP:**
 
@@ -217,7 +240,7 @@ Marca cuando el proyecto esté **cerrado a nivel MVP** según su checklist y tu 
 
 **Plus:** tema claro/oscuro y tipografía consistente.
 
-**Carpeta sugerida:** `new-learning-path/p08-micro-saas-demo/`
+**Carpeta sugerida:** `p08-micro-saas-demo/`
 
 **Checklist cierre MVP:**
 
@@ -244,6 +267,6 @@ Marca cuando el proyecto esté **cerrado a nivel MVP** según su checklist y tu 
 
 ## Documentos relacionados
 
-- Plantilla de briefing: `new-learning-path/PROJECT_BRIEF_TEMPLATE.md`
+- Plantilla de briefing: `PROJECT_BRIEF_TEMPLATE.md` (en la raíz del repo)
 
 Cuando quieras arrancar el siguiente proyecto, abre un `BRIEF.md` en su carpeta y seguimos con la ronda de preguntas de planificación antes del código.

@@ -1,7 +1,11 @@
 # Briefing de proyecto (plantilla)
 
-Copia este archivo por proyecto: `new-learning-path/<nombre-proyecto>/BRIEF.md` y rellénalo **antes** de escribir código de producto.  
+Copia este archivo por proyecto a la carpeta del proyecto en la **raíz del repo**: `<nombre-proyecto>/BRIEF.md` (p. ej. `p01-dashboard/BRIEF.md`) y rellénalo **antes** de escribir código de producto.  
 Objetivo: cerrar alcance, decisiones y **casos límite**; no buscar perfección el día 1.
+
+**Stack fijo en esta ruta (salvo excepción que documentes abajo):** React con **Vite** y estilos con **Tailwind CSS 4**.
+
+**Portfolio language:** ship **English** for in-app UI copy, mock/sample data, empty/error messages, and the project **README** (this brief file can stay in Spanish if you prefer).
 
 ---
 
@@ -131,7 +135,19 @@ Por cada decisión importante: **opción elegida**, **alternativa descartada**, 
 
 ---
 
-## 9. Riesgos e incógnitas
+## 9. Registro de decisiones durante la construcción (documento vivo)
+
+**Para portfolio:** ve **añadiendo filas** cuando toméis una decisión en mitad del proyecto (layout, responsive, librería, semántica HTML, tipado…). El objetivo es poder **copiar al README** al cerrar el MVP el “por qué” sin depender de la memoria.
+
+| Fecha | Tema | Decisión | Alternativas descartadas | Motivo (para README / entrevista) |
+|-------|------|----------|---------------------------|-----------------------------------|
+|       |      |          |                           |                                   |
+
+*(Opcional: enlace a commit o PR si la decisión fue debatida ahí.)*
+
+---
+
+## 10. Riesgos e incógnitas
 
 | Riesgo / duda | Impacto si ocurre | Mitigación (MVP) |
 |---------------|-------------------|------------------|
@@ -142,7 +158,7 @@ _(Solo para incógnitas que bloquean: librería, API, DnD, etc.)_
 
 ---
 
-## 10. Hitos (entrega incremental)
+## 11. Hitos (entrega incremental)
 
 1. **Vertical slice mínimo** (un flujo feo pero completo: UI + datos + navegación si aplica):
 2. Pulido de estados (vacío / error / carga):
@@ -151,7 +167,7 @@ _(Solo para incógnitas que bloquean: librería, API, DnD, etc.)_
 
 ---
 
-## 11. Definition of Done (checklist)
+## 12. Definition of Done (checklist)
 
 Marca al cerrar el MVP:
 
@@ -164,7 +180,7 @@ Marca al cerrar el MVP:
 
 ---
 
-## 12. Preguntas abiertas
+## 13. Preguntas abiertas
 
 _(Lo que falta decidir; no empezar bloques grandes hasta resolver o acotar “deferido”.)_
 
@@ -198,3 +214,5 @@ Quien te acompañe en el proyecto puede usar esta lista para **revisar** tu brie
 11. ¿Qué parte es “spike” y cuánto tiempo máximo le das?
 
 Cuando rellenes el briefing, **vuelve a la sección 7** al menos una vez después de definir flujos: suele aparecer ahí lo que antes se te pasaba.
+
+Durante la implementación, **actualiza la sección 9** cada vez que toméis una decisión relevante; al terminar, pasar lo esencial al README en inglés.

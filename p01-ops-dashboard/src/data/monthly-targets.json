@@ -1,0 +1,39 @@
+{
+  "monthlyTargets": [
+    {
+      "month": "2025-11",
+      "targetRevenueEUR": 72000,
+      "label": "November 2025"
+    },
+    {
+      "month": "2025-12",
+      "targetRevenueEUR": 95000,
+      "label": "December 2025"
+    },
+    {
+      "month": "2026-01",
+      "targetRevenueEUR": 68000,
+      "label": "January 2026"
+    },
+    {
+      "month": "2026-02",
+      "targetRevenueEUR": 70000,
+      "label": "February 2026"
+    },
+    {
+      "month": "2026-03",
+      "targetRevenueEUR": 88000,
+      "label": "March 2026"
+    },
+    {
+      "month": "2026-04",
+      "targetRevenueEUR": 82000,
+      "label": "April 2026"
+    },
+    {
+      "month": "2026-05",
+      "targetRevenueEUR": 85000,
+      "label": "May 2026"
+    }
+  ]
+}
